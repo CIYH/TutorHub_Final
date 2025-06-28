@@ -27,7 +27,7 @@ public class Tu_HomePageController {
     @Autowired
     private HomePageService homePageService;
     
-    @GetMapping("/")
+    @GetMapping("/tutor/")
     public String redirectToHome() {
         return "redirect:/tutor/TrangChu";
     }

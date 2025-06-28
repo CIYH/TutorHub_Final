@@ -58,7 +58,11 @@ public class LoginController {
     }
     }
     
-    
+    @RequestMapping(value = "/TutorHub", method = RequestMethod.GET)
+    public String showLandingPage() {
+        return "layout/LandingPage";
+    }
+     
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String showLoginPage() {
         return "layout/authencation_login";
@@ -125,12 +129,9 @@ public class LoginController {
         }
     }
     
-    
-    
-    
     @RequestMapping("/logout")
     public String logout(HttpSession session) {
         session.invalidate();
-        return "redirect:/login";
+        return "redirect:/TutorHub";
     }
 }

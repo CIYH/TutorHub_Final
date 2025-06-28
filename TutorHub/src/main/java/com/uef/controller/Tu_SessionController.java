@@ -202,7 +202,7 @@ public class Tu_SessionController {
 
         // Các attribute cho layout
         model.addAttribute("activeSidebar", "Khóa Học");
-        model.addAttribute("activePage", "Sửa Khóa Học");
+        model.addAttribute("activePage", "Quản Lý Khóa Học");
         model.addAttribute("body", "/WEB-INF/views/Tutor/SuaKhoaHoc.jsp");
 
         return "layout/Tutor/main";
