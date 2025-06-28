@@ -100,10 +100,10 @@ public class LoginController {
                     return "redirect:/admin";
                 
                 case "tutor":
-                    return "redirect:/tutor";
+                    return "redirect:/tutor/TrangChu";
                     
                 case "user":
-                    return "redirect:/student";
+                    return "redirect:/home";
                 default:
                     return "redirect:/login";
             }

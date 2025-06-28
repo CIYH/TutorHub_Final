@@ -26,11 +26,7 @@ public class Tu_HomePageController {
     
     @Autowired
     private HomePageService homePageService;
-    
-    @GetMapping("/tutor/")
-    public String redirectToHome() {
-        return "redirect:/tutor/TrangChu";
-    }
+
     
     @GetMapping("/TrangChu")
     public String showTutorHomepage(Model model, HttpSession session) throws JsonProcessingException {

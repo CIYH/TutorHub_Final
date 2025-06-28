@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard - Mazer Admin Dashboard</title>
+        <title>Dashboard - TutorHub</title>
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
                     <div class="sidebar-header">
                         <div class="d-flex justify-content-between">
                             <div class="logo">
-                                <a href="index.html"><img src="${pageContext.request.contextPath}/src/images/logo/logo.png" alt="Logo" srcset=""></a>
+                                <a href="index.html"><img src="${pageContext.request.contextPath}/src/images/logo/TutorHub.svg" alt="Logo" srcset=""></a>
                             </div>
                             <div class="toggler">
                                 <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
@@ -40,37 +40,34 @@
                             <li class="sidebar-title">Menu</li>
 
                             <li class="sidebar-item ${activeSidebar == 'Trang Chủ' ? 'active' : ''} ">
-                                <a href="${pageContext.request.contextPath}/TrangChu" class='sidebar-link'>
+                                <a href="${pageContext.request.contextPath}/home" class='sidebar-link'>
                                     <i class="bi bi-grid-fill"></i>
                                     <span>Trang chủ</span>
                                 </a>
                             </li>
 
-                            <li class="sidebar-item  has-sub ${activeSidebar == 'Khóa Học' ? 'active' : ''}">
+                            <li class="sidebar-item  has-sub ${activeSidebar == 'Đăng Ký' ? 'active' : ''}">
                                 <a href="#" class='sidebar-link'>
                                     <i class="bi bi-stack"></i>
-                                    <span>Khóa học</span>
+                                    <span>Đăng ký khóa học</span>
                                 </a>
                                 <ul class="submenu ">
-                                    
-                                    <li class="submenu-item ${activePage == 'Quản Lý Khóa Học' ? 'active' : ''}">
+                                    <li class="submenu-item ${activePage == 'Tìm Gia Sư' ? 'active' : ''}">
                                         <a href="${pageContext.request.contextPath}/findtutors">Tìm gia sư</a>
                                     </li>
                                 </ul>
                             </li>
 
-                            <li class="sidebar-item  has-sub">
+                            <li class="sidebar-item has-sub ${activeSidebar == 'Khóa Học' ? 'active' : ''}">
                                 <a href="#" class='sidebar-link'>
                                     <i class="bi bi-collection-fill"></i>
                                     <span>Khóa học của tôi</span>
                                 </a>
                                 <ul class="submenu ">
-                                    <li class="submenu-item ">
+                                    <li class="submenu-item ${activePage == 'Khóa học' ? 'active' : ''}">
                                         <a href="${pageContext.request.contextPath}/my-sessions">Danh sách</a>
                                     </li>
-                                    <li class="submenu-item ">
-                                        <a href="${pageContext.request.contextPath}/findtutors">Đánh giá</a>
-                                    </li>
+
                                 </ul>
                             </li>
 
@@ -95,29 +92,19 @@
                                         <h3 class="mb-0">${activePage}</h3>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-6 order-md-2 order-first d-flex justify-content-center justify-content-md-end">
+                                <div class="col-12 col-md-6 order-md-2 order-first d-flex justify-content-center justify-content-md-end ${activePage == 'Hồ Sơ' ? 'd-none' : ''}">
                                     <div class="dropdown">
                                         <a href="#" data-bs-toggle="dropdown" aria-expanded="false" class="d-flex align-items-center text-decoration-none text-reset bg-light rounded-3 p-2 shadow-sm">
                                             <div class="user-name me-2">
-                                                <h6 class="mb-0 text-gray-600">Nhật Khang</h6>
-                                                <p class="mb-0 text-sm text-gray-600">Student</p>
-                                            </div>
-                                            <div class="user-img">
-                                                <div class="avatar avatar-md">
-                                                    <img src="${pageContext.request.contextPath}/src/images/faces/1.jpg" alt="Profile Picture">
-                                                </div>
+                                                <h6 class="mb-0 text-gray-600">Hồ Sơ</h6>
                                             </div>
                                         </a>
                                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                                            <li>
-                                                <h6 class="dropdown-header">Hello, Nhật Khang!</h6>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-person me-2"></i> My Profile</a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="icon-mid bi bi-gear me-2"></i> Settings</a></li>
+                                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/profile"><i class="icon-mid bi bi-person me-2"></i> My Profile</a></li>
                                             <li>
                                                 <hr class="dropdown-divider">
                                             </li>
-                                            <li><a class="dropdown-item" href="<c:url value='/login' />"><i class="icon-mid bi bi-box-arrow-right me-2"></i> Logout</a></li>
+                                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/logout"><i class="icon-mid bi bi-box-arrow-right me-2"></i> Logout</a></li>
                                         </ul>
                                     </div>
                                 </div>
