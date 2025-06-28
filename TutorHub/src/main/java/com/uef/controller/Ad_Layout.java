@@ -47,6 +47,6 @@ public class Ad_Layout {
 
     @GetMapping("/")
     public String showHomePate(Model model) {
-        return "layout/Tutor/main";
+        return "redirect:/login";
     }
 }

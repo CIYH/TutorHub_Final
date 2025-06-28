@@ -86,13 +86,16 @@ public class LoginController {
             session.setAttribute("role", item.getpRole());  
             
             this.Id = item.getId();
+            //tutor by vkhang
+            Login_Model loggedInUser = user.get(0);
+            session.setAttribute("loggedInUser", loggedInUser); 
+            //
             
-
             switch(item.getpRole()){
                 case "admin":
                     return "redirect:/admin";
                 
-                case "tutors":
+                case "tutor":
                     return "redirect:/tutor";
                     
                 case "user":

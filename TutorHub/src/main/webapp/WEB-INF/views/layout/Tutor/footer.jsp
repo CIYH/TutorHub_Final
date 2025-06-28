@@ -8,11 +8,11 @@
             <footer>
                 <div class="footer clearfix mb-0 text-muted">
                     <div class="float-start">
-                        <p>2021 &copy; Mazer</p>
+                        <p>2025 &copy; TutorHub</p>
                     </div>
                     <div class="float-end">
-                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                                href="http://ahmadsaugi.com">A. Saugi</a></p>
+                        <p>Powered <span class="text-danger"><i></i></span>by <a
+                                href="https://themewagon.com/themes/free-bootstrap-5-html5-admin-dashboard-template-mazer/">Mazer</a></p>
                     </div>
                 </div>
             </footer>
